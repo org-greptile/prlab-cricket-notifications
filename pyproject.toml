@@ -1,0 +1,19 @@
+[project]
+name = "cricket-notifications"
+version = "1.0.0"
+description = "Hop 2 push notifications. Sends only when scoring counted a wicket."
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["notifications*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
